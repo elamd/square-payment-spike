@@ -1,3 +1,10 @@
+Set env vars:
+SQUARE_APPLICATION_ID
+and
+SQUARE_SANDBOX_TOKEN
+
+before running.
+
 # Welcome to Remix!
 
 - [Remix Docs](https://remix.run/docs)

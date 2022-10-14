@@ -1,6 +1,8 @@
-import { Form } from "@remix-run/react";
+import { Form, useTransition } from "@remix-run/react";
 
 export default function Index() {
+  const transition = useTransition();
+  const stateText =  transition.state === "submitting" ? "Saving....." : transition.state === "loading" ? "Saved!" : "";
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <p>Input customer and create order.</p>
@@ -15,6 +17,9 @@ export default function Index() {
           <button type="submit">Submit</button>
         </div>
       </Form>
+      <div>
+        {stateText}
+      </div>
     </div>
   );
 }
